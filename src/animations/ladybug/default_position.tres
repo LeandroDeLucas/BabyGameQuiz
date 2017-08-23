@@ -1,0 +1,329 @@
+[gd_resource type="Animation" format=1]
+
+[resource]
+
+resource/name = "DefaultPosition"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Label:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 156, 229 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Label:rect/size")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 14 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("body/head:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.206665, 7.02777 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("body/head:transform/rot")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("body/head:transform/scale")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("body/head/right-anthene:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 72.1111, -96.1573 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("body/head/right-anthene:transform/rot")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("body/head/right-anthene:transform/scale")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("body/head/left-eye:transform/pos")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -40.7743, 22.4586 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("body/head/left-eye:transform/rot")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("body/head/left-eye:transform/scale")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.645045, 0.645045 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("body/left-foot:transform/pos")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -62.3848, 149.961 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("body/left-foot:transform/rot")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ -0.503193 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("body/left-foot:transform/scale")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("body:transform/pos")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1.72046, -41.0372 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("body:transform/rot")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("body:transform/scale")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("body/head/left-anthene:transform/pos")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -68.6042, -95.7451 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("body/head/left-anthene:transform/rot")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("body/head/left-anthene:transform/scale")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("body/head/mouth:transform/pos")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.351929, 72.296 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("body/head/mouth:transform/rot")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("body/head/mouth:transform/scale")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.936298, 1.45866 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath(".:transform/pos")
+tracks/23/interp = 1
+tracks/23/imported = false
+tracks/23/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 165.294, 282.996 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath(".:transform/rot")
+tracks/24/interp = 1
+tracks/24/imported = false
+tracks/24/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath(".:transform/scale")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.287504, 0.287504 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("body/right-foot:transform/pos")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 65.1472, 155.062 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("body/right-foot:transform/rot")
+tracks/27/interp = 1
+tracks/27/imported = false
+tracks/27/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.69825 ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("body/right-foot:transform/scale")
+tracks/28/interp = 1
+tracks/28/imported = false
+tracks/28/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("body/head/right-eye:transform/pos")
+tracks/29/interp = 1
+tracks/29/imported = false
+tracks/29/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 48.147, 21.7279 ) ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("body/head/right-eye:transform/rot")
+tracks/30/interp = 1
+tracks/30/imported = false
+tracks/30/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("body/head/right-eye:transform/scale")
+tracks/31/interp = 1
+tracks/31/imported = false
+tracks/31/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.656092, 0.656092 ) ]
+}
+
