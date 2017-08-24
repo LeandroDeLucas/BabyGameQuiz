@@ -631,8 +631,8 @@ curve = SubResource( 1 )
 
 [node name="AntPathFollow2D" type="PathFollow2D" parent="FirstPath"]
 
-transform/pos = Vector2( 164.231, 98.8119 )
-transform/rot = -46.3533
+transform/pos = Vector2( 156.864, 100.039 )
+transform/rot = -65.7831
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0

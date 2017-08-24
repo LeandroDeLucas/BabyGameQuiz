@@ -7,7 +7,6 @@ func _ready():
 func _input(event):
 	if(event.type == InputEvent.MOUSE_BUTTON):
 		if(event.button_index == BUTTON_LEFT):
-			print(self.get_parent().get_pos().x)
 			if(event.x > (self.get_parent().get_pos().x - 16)):
 				if(event.x < (self.get_parent().get_pos().x + 16)):
 					if(event.y > (self.get_parent().get_pos().y - 16)):
