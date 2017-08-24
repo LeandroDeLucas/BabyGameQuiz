@@ -5,4 +5,7 @@ extends Panel
 # var b = "textvar"
 
 func _ready():
-	get_node("Path2D/PathFollow2D/Ant/AntPlayer").play("AntWalk");
+	get_node("FirstPath/AntPathFollow2D/Ant/AntPlayer").play("AntWalk");
+	get_node("FirstPath/Ant1AntPathFollow2D/Ant/AntPlayer").play("AntWalk");
+	get_node("SecondPath/AntPathFollow2D/Ant/AntPlayer").play("AntWalk");
+	get_node("SecondPath/Ant1PathFollow2D/Ant/AntPlayer").play("AntWalk");
