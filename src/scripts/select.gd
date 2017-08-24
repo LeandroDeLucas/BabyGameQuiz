@@ -6,6 +6,7 @@ func _ready():
 
 func assign_buttons_actions():
 	get_node("Menu/Letters").connect("pressed",self,"load_scene",["letters"])
+	get_node("Menu/AntGame").connect("pressed",self,"load_scene",["ant_game"])
 
 func load_current_buttons_labels():
 	get_node("Menu/Letters").set_button_icon(load("res://sprites/"+GLOBAL.get_current_lang()+"/ui/letters_selection.png"))
