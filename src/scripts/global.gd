@@ -86,3 +86,6 @@ func get_is_game_started():
 
 func get_itens_lenght():
 	return itensLength
+
+func get_current_lang():
+	return currentLang
