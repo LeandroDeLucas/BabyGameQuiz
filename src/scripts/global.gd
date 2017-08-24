@@ -3,7 +3,7 @@ extends Node
 var busyState = false   # global iam busy state
 var currentItens = []   # current values for buttons
 var itensLength = 4     # current values length
-var currentLang = "p"   # current language
+var currentLang = "pt_br"   # current language
 var gameStarted = false # set if game is started, used as reference for multiple scripts instances
 
 var letters = ['a', 'b', 'c', 'd', 'e', 'f',
@@ -71,7 +71,7 @@ func get_current_soud(index):
 	# index must be a value between 0 and itensLength (it means current 4 buttons)
 	if(index > -1):
 		if(index < itensLength):
-			return "l_" + currentLang + "_" + letters[currentItens[index]]
+			return letters[currentItens[index]]
 	else:
 		return "not found"
 
@@ -86,3 +86,6 @@ func get_is_game_started():
 
 func get_itens_lenght():
 	return itensLength
+
+func get_current_lang():
+	return currentLang
