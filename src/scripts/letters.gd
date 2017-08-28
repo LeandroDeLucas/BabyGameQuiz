@@ -1,9 +1,10 @@
 extends Panel
 
-onready var ladyplayer = get_node("LadyBug/LadyBugPlayer")
+onready var ladyplayer # = get_node("LadyBug/LadyBugPlayer")
 onready var scenarioplayer = get_node("Scenario/ScenarioPlayer")
 onready var lettersplayer = get_node("LettersPanel/LettersSound")
 onready var blinktimer = get_node("Timer")
+var ontimeladybug
 
 
 func _ready():
@@ -21,10 +22,15 @@ func _ready():
 		get_node("LettersPanel/StarsLayer/AnimationPlayer").play("StarsMove")
 		# starts lettersmove animation
 		get_node("LettersPanel/LettersPlayer").play("LettersMove")
+		ontimeladybug=preload("res://scenes/ladybug.tscn").instance()
+		get_node(".").add_child(ontimeladybug)
+		ladyplayer = get_node("LadyBug/LadyBugPlayer")
 		# starts sheiscomming animation
 		ladyplayer.play("SheIsComming")
+		
 	# assign to timer timetou ladybug_blinks animation
 	blinktimer.connect("timeout",self,"ladybug_blinks")
+	
 	# assign buttons function when pressed
 	var i=0
 	while(i < GLOBAL.get_itens_lenght()):

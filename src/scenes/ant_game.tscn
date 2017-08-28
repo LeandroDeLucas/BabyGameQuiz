@@ -632,7 +632,7 @@ curve = SubResource( 1 )
 [node name="AntPathFollow2D" type="PathFollow2D" parent="FirstPath"]
 
 transform/pos = Vector2( 156.864, 100.039 )
-transform/rot = -65.7831
+transform/rot = -65.7834
 offset = 0.0
 h_offset = 0.0
 v_offset = 0.0
@@ -736,8 +736,8 @@ autoplay = ""
 
 [node name="Ant1AntPathFollow2D" type="PathFollow2D" parent="FirstPath"]
 
-transform/pos = Vector2( 393.615, 224.024 )
-transform/rot = -55.8787
+transform/pos = Vector2( 393.613, 224.021 )
+transform/rot = -55.8754
 offset = 3945.86
 h_offset = 0.0
 v_offset = 0.0
@@ -961,7 +961,7 @@ autoplay = ""
 [node name="Ant1PathFollow2D" type="PathFollow2D" parent="SecondPath"]
 
 transform/pos = Vector2( 607.643, 364.448 )
-transform/rot = 6.914
+transform/rot = 6.91433
 offset = 2310.54
 h_offset = 0.0
 v_offset = 0.0
