@@ -9,7 +9,7 @@ func _ready():
 # define process on every input event
 func _input(event):
 	# check if mouse button is leftbutton and if mouse event is between this
-	# object position +16 and -16 on X and Y, if event matches then this
+	# object position +16 and -16 on obj.X and obj.Y, if event matches then this
 	# object should hide itself
 	if(event.type == InputEvent.MOUSE_BUTTON):
 		if(event.button_index == BUTTON_LEFT):
