@@ -21,7 +21,7 @@ func _input(event):
 				if(event.x < (self.get_parent().get_pos().x + 16)):
 					if(event.y > (self.get_parent().get_pos().y - 16)):
 						if(event.y < (self.get_parent().get_pos().y + 32)):
-							self.set_hidden(true)
+							self.queue_free()
 
 # defined process to be run every frame (delta)
 func _fixed_process(delta):
