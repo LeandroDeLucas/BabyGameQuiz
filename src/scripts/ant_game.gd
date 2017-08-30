@@ -4,7 +4,7 @@ extends Panel
 # var a = 2
 # var b = "textvar"
 var antinstance
-var visibleAntsLimit=20
+var visibleAntsLimit=10
 onready var newantstimer = get_node("NewAntsTimer")
 
 func _ready():
@@ -12,10 +12,11 @@ func _ready():
 	newantstimer.connect("timeout",self,"add_new_ants")
 	get_node("SecondPath").add_child(antinstance.instance())
 	get_node("FirstPath").add_child(antinstance.instance())
+	GLOBAL.set_inc_visible_ants(2)
 
 
 func add_new_ants():
 	if(GLOBAL.get_visible_ants() < visibleAntsLimit):
-		GLOBAL.set_inc_visible_ants()
+		GLOBAL.set_inc_visible_ants(2)
 		get_node("SecondPath").add_child(antinstance.instance())
 		get_node("FirstPath").add_child(antinstance.instance())

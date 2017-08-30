@@ -94,8 +94,8 @@ func get_current_lang():
 func get_visible_ants():
 	return visibleAntsCount
 
-func set_inc_visible_ants():
-	visibleAntsCount = visibleAntsCount + 1
+func set_inc_visible_ants(step):
+	visibleAntsCount = visibleAntsCount + step
 
 func set_dec_visible_ants():
 	visibleAntsCount = visibleAntsCount - 1
