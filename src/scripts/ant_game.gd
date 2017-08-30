@@ -4,6 +4,7 @@ extends Panel
 # var a = 2
 # var b = "textvar"
 var antinstance
+var visibleAntsLimit=20
 onready var newantstimer = get_node("NewAntsTimer")
 
 func _ready():
@@ -14,5 +15,7 @@ func _ready():
 
 
 func add_new_ants():
-	get_node("SecondPath").add_child(antinstance.instance())
-	get_node("FirstPath").add_child(antinstance.instance())
+	if(GLOBAL.get_visible_ants() < visibleAntsLimit):
+		GLOBAL.set_inc_visible_ants()
+		get_node("SecondPath").add_child(antinstance.instance())
+		get_node("FirstPath").add_child(antinstance.instance())

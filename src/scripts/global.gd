@@ -5,6 +5,7 @@ var currentItens = []   # current values for buttons
 var itensLength = 4     # current values length
 var currentLang = "pt_br"   # current language
 var gameStarted = false # set if game is started, used as reference for multiple scripts instances
+var visibleAntsCount = 0
 
 var letters = ['a', 'b', 'c', 'd', 'e', 'f',
 	'g', 'h', 'i', 'j',	'k', 'l', 'm', 'n',
@@ -89,3 +90,12 @@ func get_itens_lenght():
 
 func get_current_lang():
 	return currentLang
+
+func get_visible_ants():
+	return visibleAntsCount
+
+func set_inc_visible_ants():
+	visibleAntsCount = visibleAntsCount + 1
+
+func set_dec_visible_ants():
+	visibleAntsCount = visibleAntsCount - 1
