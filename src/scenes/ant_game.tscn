@@ -55,7 +55,7 @@ curve = SubResource( 6 )
 [node name="NewAntsTimer" type="Timer" parent="."]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 1.0
 one_shot = false
 autostart = true
 
