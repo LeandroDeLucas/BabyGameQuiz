@@ -19,9 +19,9 @@ func _input(event):
 	# object should hide itself
 	if(event.type == InputEvent.MOUSE_BUTTON):
 		if(event.button_index == BUTTON_LEFT):
-			if(event.x > (self.get_parent().get_pos().x - 16)):
-				if(event.x < (self.get_parent().get_pos().x + 16)):
-					if(event.y > (self.get_parent().get_pos().y - 16)):
+			if(event.x > (self.get_parent().get_pos().x - 20)):
+				if(event.x < (self.get_parent().get_pos().x + 20)):
+					if(event.y > (self.get_parent().get_pos().y - 32)):
 						if(event.y < (self.get_parent().get_pos().y + 32)):
 							i_was_touched()
 func destroy_itself():
