@@ -5,6 +5,7 @@ func _ready():
 	set_fixed_process(true)
 	# define process to every input event
 	set_process_input(true)
+	get_node("AntPlayer").play("AntWalk")
 
 # define process on every input event
 func _input(event):
