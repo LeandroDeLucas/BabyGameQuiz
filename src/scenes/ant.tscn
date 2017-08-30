@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://scripts/ant.gd" type="Script" id=1]
 [ext_resource path="res://sprites/default/ant/abdome.png" type="Texture" id=2]
@@ -27,6 +27,27 @@ _data = {
 [sub_resource type="CanvasItemMaterial" id=2]
 
 shader/shader = SubResource( 1 )
+shader/shading_mode = 0
+
+[sub_resource type="CanvasItemShaderGraph" id=5]
+
+_code = {
+"fragment": "vec3 nd1sl0=SRC_COLOR.rgb;
+COLOR.rgb=nd1sl0;
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+_data = {
+"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [ 0, 1, 0 ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=6]
+
+shader/shader = SubResource( 5 )
 shader/shading_mode = 0
 
 [sub_resource type="Animation" id=3]
@@ -607,26 +628,25 @@ __meta__ = {
 
 [node name="abdome" type="Sprite" parent="Ant"]
 
+material/material = SubResource( 6 )
 transform/pos = Vector2( -0.0922241, 3.33398 )
-transform/rot = -5.41961
 texture = ExtResource( 2 )
 offset = Vector2( 0.0789185, 7.5856 )
-modulate = Color( 1, 0, 0.113725, 1 )
+modulate = Color( 0.0253906, 0, 0.8125, 1 )
 
 [node name="left-back-leg" type="Sprite" parent="Ant"]
 
-transform/pos = Vector2( -4.50178, 1.88757 )
-transform/rot = 12.8527
-transform/scale = Vector2( 0.977925, 0.955551 )
+transform/pos = Vector2( -4.52563, 1.88461 )
+transform/rot = 18.8276
 texture = ExtResource( 3 )
 offset = Vector2( -10.0727, 14.7167 )
 modulate = Color( 1, 0, 0.113725, 1 )
 
 [node name="right-back-leg" type="Sprite" parent="Ant"]
 
-transform/pos = Vector2( 3.94356, 1.47499 )
-transform/rot = 26.2076
-transform/scale = Vector2( 0.894537, 0.560829 )
+transform/pos = Vector2( 3.92711, 1.45715 )
+transform/rot = 31.0867
+transform/scale = Vector2( 0.882308, 0.509907 )
 texture = ExtResource( 3 )
 offset = Vector2( 10.6015, 14.5332 )
 flip_h = true
@@ -635,24 +655,21 @@ modulate = Color( 1, 0, 0.113725, 1 )
 [node name="body" type="Sprite" parent="Ant"]
 
 transform/pos = Vector2( -0.0221558, -5.8703 )
-transform/rot = -1.1437
 texture = ExtResource( 4 )
 modulate = Color( 1, 0, 0.113725, 1 )
 
 [node name="left-front-leg" type="Sprite" parent="Ant"]
 
-transform/pos = Vector2( -3.71094, -10.1352 )
-transform/rot = 46.4321
-transform/scale = Vector2( 0.736289, 0.625307 )
+transform/pos = Vector2( -3.66591, -10.1054 )
+transform/rot = 51.1721
+transform/scale = Vector2( 0.705711, 0.581861 )
 texture = ExtResource( 5 )
 offset = Vector2( -6.83649, -10.7621 )
 modulate = Color( 1, 0, 0.113725, 1 )
 
 [node name="right-front-leg" type="Sprite" parent="Ant"]
 
-transform/pos = Vector2( 3.6448, -9.54053 )
-transform/rot = -5.08166
-transform/scale = Vector2( 0.962929, 0.950643 )
+transform/pos = Vector2( 3.65912, -9.53992 )
 texture = ExtResource( 5 )
 offset = Vector2( 6.73364, -11.7894 )
 flip_h = true
@@ -661,25 +678,22 @@ modulate = Color( 1, 0, 0.113725, 1 )
 [node name="head" type="Sprite" parent="Ant"]
 
 transform/pos = Vector2( 0.24881, -15.1669 )
-transform/rot = 2.74067
 texture = ExtResource( 6 )
 offset = Vector2( 0.0874939, -4.53604 )
 modulate = Color( 1, 0, 0.113725, 1 )
 
 [node name="left-middle-leg" type="Sprite" parent="Ant"]
 
-transform/pos = Vector2( -3.21532, -3.68081 )
-transform/rot = -25.1422
-transform/scale = Vector2( 0.751445, 0.537421 )
+transform/pos = Vector2( -3.1227, -3.82195 )
+transform/rot = -28.2926
+transform/scale = Vector2( 0.722625, 0.483784 )
 texture = ExtResource( 7 )
 offset = Vector2( -12.4915, 1.86444 )
 modulate = Color( 1, 0, 0.113725, 1 )
 
 [node name="right-middle-leg" type="Sprite" parent="Ant"]
 
-transform/pos = Vector2( 4.1509, -2.42797 )
-transform/rot = 3.46869
-transform/scale = Vector2( 0.967906, 0.94844 )
+transform/pos = Vector2( 4.25592, -2.29303 )
 texture = ExtResource( 7 )
 offset = Vector2( 11.581, 1.69394 )
 flip_h = true

@@ -6,6 +6,9 @@ func _ready():
 	# define process to every input event
 	set_process_input(true)
 	get_node("AntPlayer").play("AntWalk")
+	randomize()
+	var new_color=Color(randf(),randf(),randf(),1)
+	get_node("abdome").set_modulate(new_color)
 
 # define process on every input event
 func _input(event):
