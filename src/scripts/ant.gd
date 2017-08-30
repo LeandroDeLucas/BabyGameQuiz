@@ -1,5 +1,7 @@
 extends Node2D
 
+var touch_on_execution=false
+
 func _ready():
 	# defines a fixed process to be run every frame (delta)
 	set_fixed_process(true)
@@ -21,11 +23,7 @@ func _input(event):
 				if(event.x < (self.get_parent().get_pos().x + 16)):
 					if(event.y > (self.get_parent().get_pos().y - 16)):
 						if(event.y < (self.get_parent().get_pos().y + 32)):
-							GLOBAL.set_dec_visible_ants()
-							self.set_hidden(true)
-							get_node("SamplePlayer2D").play("jab")
-							get_node("SamplePlayer2D").connect("finished", self, "destroy_itself")
-
+							i_was_touched()
 func destroy_itself():
 	self.queue_free()
 
@@ -34,4 +32,12 @@ func _fixed_process(delta):
 	# every delta move this object on path 200*delta where delta is a calculum
 	# to balance fps. The higher fps is the lower delta should be.
 	get_parent().set_offset(get_parent().get_offset()+(200*delta))
+
+func i_was_touched():
+	if(touch_on_execution == false):
+		touch_on_execution=true
+		GLOBAL.set_dec_visible_ants()
+		self.set_hidden(true)
+		get_node("SamplePlayer2D").play("jab")
+		get_node("SamplePlayer2D").connect("finished", self, "destroy_itself")
 
