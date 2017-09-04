@@ -916,6 +916,7 @@ autoplay = ""
 
 [node name="ButtonsLayer" type="Node2D" parent="LettersPanel"]
 
+editor/display_folded = true
 transform/pos = Vector2( 2.11313, -0.338409 )
 transform/rot = 0.0196
 

@@ -5,25 +5,12 @@ var touch_on_execution=false
 func _ready():
 	# defines a fixed process to be run every frame (delta)
 	set_fixed_process(true)
-	# define process to every input event
-	set_process_input(true)
+	get_node("Area2D").connect("input_event", self,"_on_Area2D_input_event")
 	get_node("AntPlayer").play("AntWalk")
 	randomize()
 	var new_color=Color(randf(),randf(),randf(),1)
 	get_node("abdome").set_modulate(new_color)
 
-# define process on every input event
-func _input(event):
-	# check if mouse button is leftbutton and if mouse event is between this
-	# object position +16 and -16 on obj.X and obj.Y, if event matches then this
-	# object should hide itself
-	if(event.type == InputEvent.MOUSE_BUTTON):
-		if(event.button_index == BUTTON_LEFT):
-			if(event.x > (self.get_parent().get_pos().x - 20)):
-				if(event.x < (self.get_parent().get_pos().x + 20)):
-					if(event.y > (self.get_parent().get_pos().y - 32)):
-						if(event.y < (self.get_parent().get_pos().y + 32)):
-							i_was_touched()
 func destroy_itself():
 	self.queue_free()
 
@@ -41,3 +28,12 @@ func i_was_touched():
 		get_node("SamplePlayer2D").play("jab")
 		get_node("SamplePlayer2D").connect("finished", self, "destroy_itself")
 
+func _draw():  
+   # each frame draw a bounding rect to show boundaries clearer
+   #self.draw_rect(self.get_item_rect(),Color(0,0,1,0.2))
+	pass
+
+func _on_Area2D_input_event( viewport, event, shape_idx ):
+	if(event.type ==  InputEvent.MOUSE_BUTTON):
+		if(event.button_index == BUTTON_LEFT):
+			i_was_touched()

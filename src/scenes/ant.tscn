@@ -1,13 +1,13 @@
-[gd_scene load_steps=16 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://scripts/ant.gd" type="Script" id=1]
-[ext_resource path="res://sprites/default/ant/abdome.png" type="Texture" id=2]
-[ext_resource path="res://sprites/default/ant/back-leg.png" type="Texture" id=3]
-[ext_resource path="res://sprites/default/ant/body.png" type="Texture" id=4]
-[ext_resource path="res://sprites/default/ant/front-leg.png" type="Texture" id=5]
-[ext_resource path="res://sprites/default/ant/head.png" type="Texture" id=6]
-[ext_resource path="res://sprites/default/ant/middle-leg.png" type="Texture" id=7]
-[ext_resource path="res://audio/default/jab.wav" type="Sample" id=8]
+[ext_resource path="res://audio/default/jab.wav" type="Sample" id=2]
+[ext_resource path="res://sprites/default/ant/abdome.png" type="Texture" id=3]
+[ext_resource path="res://sprites/default/ant/back-leg.png" type="Texture" id=4]
+[ext_resource path="res://sprites/default/ant/body.png" type="Texture" id=5]
+[ext_resource path="res://sprites/default/ant/front-leg.png" type="Texture" id=6]
+[ext_resource path="res://sprites/default/ant/head.png" type="Texture" id=7]
+[ext_resource path="res://sprites/default/ant/middle-leg.png" type="Texture" id=8]
 
 [sub_resource type="CanvasItemShaderGraph" id=1]
 
@@ -30,30 +30,8 @@ _data = {
 shader/shader = SubResource( 1 )
 shader/shading_mode = 0
 
-[sub_resource type="CanvasItemShaderGraph" id=5]
-
-_code = {
-"fragment": "vec3 nd1sl0=SRC_COLOR.rgb;
-COLOR.rgb=nd1sl0;
-",
-"fragment_ofs": 0,
-"light": "",
-"light_ofs": 0,
-"vertex": "",
-"vertex_ofs": 0
-}
-_data = {
-"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [ 0, 1, 0 ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
-}
-
-[sub_resource type="CanvasItemMaterial" id=6]
-
-shader/shader = SubResource( 5 )
-shader/shading_mode = 0
-
 [sub_resource type="Animation" id=3]
 
-resource/name = "AntWalk"
 length = 1.0
 loop = true
 step = 0.1
@@ -604,14 +582,41 @@ tracks/26/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="SampleLibrary" id=7]
+[sub_resource type="SampleLibrary" id=5]
 
 samples/jab = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 8 )
+"sample": ExtResource( 2 )
 }
+
+[sub_resource type="CanvasItemShaderGraph" id=6]
+
+_code = {
+"fragment": "vec3 nd1sl0=SRC_COLOR.rgb;
+COLOR.rgb=nd1sl0;
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+_data = {
+"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [ 0, 1, 0 ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=7]
+
+shader/shader = SubResource( 6 )
+shader/shading_mode = 0
+
+[sub_resource type="CapsuleShape2D" id=8]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
 
 [node name="AntPathFollow2D" type="PathFollow2D"]
 
@@ -628,86 +633,10 @@ lookahead = 4.0
 [node name="Ant" type="Node2D" parent="."]
 
 material/material = SubResource( 2 )
-transform/pos = Vector2( -4.07645, -0.972656 )
-transform/rot = 260.316
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( -4.07644, -0.97281 )
+transform/rot = -99.684
+transform/scale = Vector2( 0.6, 0.6 )
 script/script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="abdome" type="Sprite" parent="Ant"]
-
-material/material = SubResource( 6 )
-transform/pos = Vector2( -0.0922241, 3.33398 )
-texture = ExtResource( 2 )
-offset = Vector2( 0.0789185, 7.5856 )
-modulate = Color( 0.0253906, 0, 0.8125, 1 )
-
-[node name="left-back-leg" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( -4.52563, 1.88461 )
-transform/rot = 18.8276
-texture = ExtResource( 3 )
-offset = Vector2( -10.0727, 14.7167 )
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="right-back-leg" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( 3.92711, 1.45715 )
-transform/rot = 31.0867
-transform/scale = Vector2( 0.882308, 0.509907 )
-texture = ExtResource( 3 )
-offset = Vector2( 10.6015, 14.5332 )
-flip_h = true
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="body" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( -0.0221558, -5.8703 )
-texture = ExtResource( 4 )
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="left-front-leg" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( -3.66591, -10.1054 )
-transform/rot = 51.1721
-transform/scale = Vector2( 0.705711, 0.581861 )
-texture = ExtResource( 5 )
-offset = Vector2( -6.83649, -10.7621 )
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="right-front-leg" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( 3.65912, -9.53992 )
-texture = ExtResource( 5 )
-offset = Vector2( 6.73364, -11.7894 )
-flip_h = true
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="head" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( 0.24881, -15.1669 )
-texture = ExtResource( 6 )
-offset = Vector2( 0.0874939, -4.53604 )
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="left-middle-leg" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( -3.1227, -3.82195 )
-transform/rot = -28.2926
-transform/scale = Vector2( 0.722625, 0.483784 )
-texture = ExtResource( 7 )
-offset = Vector2( -12.4915, 1.86444 )
-modulate = Color( 1, 0, 0.113725, 1 )
-
-[node name="right-middle-leg" type="Sprite" parent="Ant"]
-
-transform/pos = Vector2( 4.25592, -2.29303 )
-texture = ExtResource( 7 )
-offset = Vector2( 11.581, 1.69394 )
-flip_h = true
-modulate = Color( 1, 0, 0.113725, 1 )
 
 [node name="AntPlayer" type="AnimationPlayer" parent="Ant"]
 
@@ -724,13 +653,114 @@ autoplay = ""
 
 [node name="SamplePlayer2D" type="SamplePlayer2D" parent="Ant"]
 
+visibility/behind_parent = true
+transform/pos = Vector2( 16.6637, 23.7423 )
+transform/scale = Vector2( 0.18853, 0.258054 )
 params/volume_db = 0.0
 params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 7 )
+config/samples = SubResource( 5 )
 config/pitch_random = 0.0
+
+[node name="abdome" type="Sprite" parent="Ant"]
+
+material/material = SubResource( 7 )
+transform/pos = Vector2( -0.0922241, 3.33398 )
+texture = ExtResource( 3 )
+offset = Vector2( 0.0789185, 7.5856 )
+modulate = Color( 0.0253906, 0, 0.8125, 1 )
+
+[node name="left-back-leg" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( -4.52563, 1.88461 )
+transform/rot = 18.8276
+texture = ExtResource( 4 )
+offset = Vector2( -10.0727, 14.7167 )
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="right-back-leg" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( 3.92711, 1.45715 )
+transform/rot = 31.0867
+transform/scale = Vector2( 0.882308, 0.509907 )
+texture = ExtResource( 4 )
+offset = Vector2( 10.6015, 14.5332 )
+flip_h = true
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="body" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( -0.0221558, -5.8703 )
+texture = ExtResource( 5 )
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="left-front-leg" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( -3.66591, -10.1054 )
+transform/rot = 51.1721
+transform/scale = Vector2( 0.705711, 0.581861 )
+texture = ExtResource( 6 )
+offset = Vector2( -6.83649, -10.7621 )
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="right-front-leg" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( 3.65912, -9.53992 )
+texture = ExtResource( 6 )
+offset = Vector2( 6.73364, -11.7894 )
+flip_h = true
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="head" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( 0.24881, -15.1669 )
+texture = ExtResource( 7 )
+offset = Vector2( 0.0874939, -4.53604 )
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="left-middle-leg" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( -3.1227, -3.82195 )
+transform/rot = -28.2926
+transform/scale = Vector2( 0.722625, 0.483784 )
+texture = ExtResource( 8 )
+offset = Vector2( -12.4915, 1.86444 )
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="right-middle-leg" type="Sprite" parent="Ant"]
+
+transform/pos = Vector2( 4.25592, -2.29303 )
+texture = ExtResource( 8 )
+offset = Vector2( 11.581, 1.69394 )
+flip_h = true
+modulate = Color( 1, 0, 0.113725, 1 )
+
+[node name="Area2D" type="Area2D" parent="Ant"]
+
+transform/pos = Vector2( 0.333871, -1.20161 )
+transform/rot = 91.6686
+transform/scale = Vector2( 1.58127, 1.00586 )
+input/pickable = true
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( -1.26877e-07, -2.9026, 1.73287, -7.57459e-08, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ant/Area2D"]
+
+transform/rot = 90.0
+transform/scale = Vector2( 2.9026, 1.73287 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
 
 
