@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://scripts/select.gd" type="Script" id=1]
 [ext_resource path="res://sprites/default/flags/pt_br.png" type="Texture" id=2]
 [ext_resource path="res://sprites/default/flags/en_us.png" type="Texture" id=3]
 [ext_resource path="res://sprites/default/flags/es_es.png" type="Texture" id=4]
-[ext_resource path="res://sprites/pt_br/ui/letters_selection.png" type="Texture" id=5]
-[ext_resource path="res://sprites/pt_br/ui/numbers_selection.png" type="Texture" id=6]
-[ext_resource path="res://sprites/pt_br/ui/animals_selection.png" type="Texture" id=7]
-[ext_resource path="res://sprites/pt_br/ui/collors_selection.png" type="Texture" id=8]
+[ext_resource path="res://sprites/default/ui/menu_letters.png" type="Texture" id=5]
+[ext_resource path="res://sprites/default/ui/menu_numbers.png" type="Texture" id=6]
+[ext_resource path="res://sprites/default/ui/menu_animals.png" type="Texture" id=7]
+[ext_resource path="res://sprites/default/ui/menu_collors.png" type="Texture" id=8]
+[ext_resource path="res://icon.png" type="Texture" id=9]
 
 [node name="MainPanel" type="Panel"]
 
@@ -31,11 +32,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
-color = Color( 0, 0.671875, 1, 1 )
+margin/left = -1.0
+margin/top = -1.0
+margin/right = 1.0
+margin/bottom = 1.0
+color = Color( 1, 1, 1, 1 )
 
 [node name="LangButtons" type="Node2D" parent="."]
 
@@ -47,10 +48,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -227.0
-margin/top = -142.0
-margin/right = -123.0
-margin/bottom = -72.0
+margin/left = -228.0
+margin/top = -72.0
+margin/right = -124.0
+margin/bottom = -2.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -63,10 +64,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -49.0
-margin/top = -143.0
-margin/right = 55.0
-margin/bottom = -73.0
+margin/left = -50.0
+margin/top = -73.0
+margin/right = 54.0
+margin/bottom = -3.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -79,10 +80,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 107.0
-margin/top = -143.0
-margin/right = 211.0
-margin/bottom = -73.0
+margin/left = 106.0
+margin/top = -73.0
+margin/right = 210.0
+margin/bottom = -3.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -99,15 +100,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -106.0
-margin/top = 27.0
-margin/right = 106.0
-margin/bottom = 83.0
+margin/left = -76.0
+margin/top = 9.0
+margin/right = 144.0
+margin/bottom = 84.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "LETTERS"
 icon = ExtResource( 5 )
-flat = true
+flat = false
 
 [node name="Numbers" type="Button" parent="Menu"]
 
@@ -115,15 +117,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -105.0
-margin/top = 92.0
-margin/right = 107.0
-margin/bottom = 148.0
+margin/left = -76.0
+margin/top = 86.0
+margin/right = 144.0
+margin/bottom = 161.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "NUMBERS"
 icon = ExtResource( 6 )
-flat = true
+flat = false
 
 [node name="Animals" type="Button" parent="Menu"]
 
@@ -131,15 +134,16 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -105.0
-margin/top = 157.0
-margin/right = 107.0
-margin/bottom = 213.0
+margin/left = -76.0
+margin/top = 163.0
+margin/right = 144.0
+margin/bottom = 238.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "ANIMALS"
 icon = ExtResource( 7 )
-flat = true
+flat = false
 
 [node name="Collors" type="Button" parent="Menu"]
 
@@ -147,14 +151,32 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -105.0
-margin/top = 226.0
-margin/right = 107.0
-margin/bottom = 282.0
+margin/left = -76.0
+margin/top = 240.0
+margin/right = 144.0
+margin/bottom = 315.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+text = "COLLORS"
 icon = ExtResource( 8 )
-flat = true
+flat = false
+
+[node name="AntGame" type="Button" parent="Menu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -76.0
+margin/top = 316.0
+margin/right = 144.0
+margin/bottom = 391.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Let's kill some ants"
+icon = ExtResource( 9 )
+flat = false
 
 
